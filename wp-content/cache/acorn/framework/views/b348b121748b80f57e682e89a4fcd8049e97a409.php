@@ -1,0 +1,10 @@
+<?php $__env->startSection('content'); ?>
+  <?php while(have_posts()): ?> <?php (the_post()); ?>
+    <?php echo $__env->make('partials.page-header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('partials.content-page', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+  <?php endwhile; ?>
+
+  <h1>Home Template Elevate Digital</h1>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/html/wp-content/themes/tcswiss/resources/views/template-home.blade.php ENDPATH**/ ?>
